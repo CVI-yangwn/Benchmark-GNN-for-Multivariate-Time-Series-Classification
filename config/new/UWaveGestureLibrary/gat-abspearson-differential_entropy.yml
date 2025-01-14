@@ -1,0 +1,51 @@
+DATASET:
+  CLASS: UEADataset
+  PARAM:
+    name: UWaveGestureLibrary
+    path: ./dataset/Multivariate2018_npz
+  bands: 5
+  fs: 100
+EXPERIMENT:
+  BATCH_SIZE: 64
+  EPOCHS: 200
+  OPTIMIZER:
+    CLASS: SGD
+    PARAM:
+      lr: 0.001
+      momentum: 0.9
+      weight_decay: 0.0005
+  SCHEDULER:
+    CLASS: ReduceLROnPlateau
+    PARAM:
+      cooldown: 0
+      eps: 8.0e-09
+      factor: 0.5
+      min_lr: 1.0e-06
+      mode: min
+      patience: 10
+      threshold: 4.0e-05
+      threshold_mode: rel
+      verbose: false
+GRAPH:
+  ADJ_MATRIX: abspearson
+  NODE: differential_entropy
+MODEL:
+  CLASS: GAT
+  PARAM:
+    dropout: 0.1
+    graphlearn: false
+    hidden_dim: 128
+    in_dim: 5
+    len: 315
+    mlp_dim: 128
+    n_classes: 8
+    n_layers: 3
+    num_heads: 1
+    readout: mean
+    residual: true
+    self_loop: true
+    thred: 0.5
+SYSTEM:
+  GPU: 7
+  NUM_WORKERS: 10
+  SEED: 42
