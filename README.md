@@ -11,12 +11,13 @@ Our platforms are Ubuntu 20.04.1 and Ubuntu 16.04.4. The detailed requirement of
 Download all of the new 30 multivariate UEA Time Series Classification datasets from [here](https://www.timeseriesclassification.com/aeon-toolkit/Archives/Multivariate2018_ts.zip). \
 
 Then unzip the file in direction MTSC-Graph-benchmarking/dataset/Multivariate2018_npz as the path tree shows
-> MTSC-Graph-benchmarking \
->    |- dataset \
->        |- Multivariate2018_npz \
->             |- ArticularyWordRecognition \
->             |- ...                      
-
+```
+MTSC-Graph-benchmarking
+   |- dataset
+   |   |- Multivariate2018_npz
+   |   |    |- ArticularyWordRecognition
+   |   |    |- ...                      
+```
 
 ### Train Command
 ```shell
