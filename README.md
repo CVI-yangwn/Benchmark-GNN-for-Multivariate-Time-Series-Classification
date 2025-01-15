@@ -4,8 +4,13 @@ The code for the paper: Benchmarking Graph Representations and Graph Neural Netw
 ## Usage
 
 ## Environment
-Our platforms are Ubuntu 20.04.1 and Ubuntu 16.04.4. The detailed requirement of environment please see at file [environment.yml](./environment.yml).
+Our platforms are Ubuntu 20.04.1 and Ubuntu 16.04.4. The detailed requirement of environment please see at file [environment.yml](./environment.yml). 
 
+To set up the environment easily, you can run commands:
+```shell
+conda env create -f environment.yml -n <environment_name>
+conda activate <environment_name>
+```
 
 ## Data Preparation
 Download all of the new 30 multivariate UEA Time Series Classification datasets from [here](https://www.timeseriesclassification.com/aeon-toolkit/Archives/Multivariate2018_ts.zip). \
@@ -20,14 +25,38 @@ MTSC-Graph-benchmarking
 ```
 
 ### Train Command
+
+**Parameter Description**
+
+The following command-line arguments are supported by the script:
+
+| Argument      | Description                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| `--log_path`  | Path to save the training log file.                                         |
+| `--conf_file` | Path to the configuration file for model and training settings.             |
+| `--save_path` | Directory to save the trained models.                                       |
+| `--gpu`       | ID of the GPU device to use for training.                                   |
+| `--seed`      | Random seed for reproducibility of experiments.                             |
+
+---
+
+**Usage Examples**
+
+1. Training with Custom Parameters
+
 ```shell
 python main.py --log_path $logFile --conf_file ./config/new/ERing/gcn-raw-complete.yml --save_path ./models --gpu 0 --seed 42
 ```
-or
+
+2. Training with a Script
+
 ```shell
 bash scripts/train.sh
 ```
+The [train.sh](./scripts/train.sh) script contains predefined configurations and can be modified to suit your needs.
+
 ### Test Command
+After training the model, you can evaluate its performance using the provided test script.
 ```shell
 bash scripts/test.sh
 ```
