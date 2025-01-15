@@ -6,7 +6,7 @@ DATASET:
   bands: 5
   fs: 0
 EXPERIMENT:
-  BATCH_SIZE: 64
+  BATCH_SIZE: 1
   EPOCHS: 200
   OPTIMIZER:
     CLASS: SGD
@@ -34,7 +34,7 @@ MODEL:
   PARAM:
     dropout: 0.1
     graphlearn: false
-    hidden_dim: 128
+    hidden_dim: 64
     in_dim: 270
     len: 270
     mlp_dim: 128

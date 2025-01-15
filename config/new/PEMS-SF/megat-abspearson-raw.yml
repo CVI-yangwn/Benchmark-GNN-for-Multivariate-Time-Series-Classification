@@ -6,7 +6,7 @@ DATASET:
   bands: 5
   fs: 0
 EXPERIMENT:
-  BATCH_SIZE: 64
+  BATCH_SIZE: 8
   EPOCHS: 200
   OPTIMIZER:
     CLASS: SGD
@@ -34,7 +34,7 @@ MODEL:
   PARAM:
     dropout: 0.1
     graphlearn: false
-    hidden_dim: 128
+    hidden_dim: 32
     in_dim: 144
     len: 144
     mlp_dim: 128
@@ -44,7 +44,7 @@ MODEL:
     readout: mean
     residual: true
     t_embedding: 128
-    thred: 0.5
+    thred: 0.0
 SYSTEM:
   GPU: 7
   NUM_WORKERS: 10
