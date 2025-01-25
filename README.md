@@ -65,3 +65,16 @@ bash scripts/test.sh
 
 Due to the ongoing review process of our paper, the experimental details and results are currently not publicly available. We will update this section once the paper is accepted and published.
 
+## Citation 
+
+**Please kindly cite our papers if you used or were inspired by our idea:**
+
+```
+@article{yang2025benchmarking,
+  title={Benchmarking Graph Representations and Graph Neural Networks for Multivariate Time Series Classification},
+  author={Yang, Wennuo and Wu, Shiling and Zhou, Yuzhi and Luo, Cheng and He, Xilin and Xie, Weicheng and Shen, Linlin and Song, Siyang},
+  journal={arXiv preprint arXiv:2501.08305},
+  year={2025}
+}
+```
+
