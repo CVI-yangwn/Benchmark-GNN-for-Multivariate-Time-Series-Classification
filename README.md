@@ -13,7 +13,7 @@ conda activate <environment_name>
 ```
 
 ## Data Preparation
-Download all of the new 30 multivariate UEA Time Series Classification datasets from [here](https://www.timeseriesclassification.com/aeon-toolkit/Archives/Multivariate2018_ts.zip). \
+Download all of the new 30 multivariate UEA Time Series Classification datasets from [here](https://huggingface.co/datasets/EvergreenTree/MTSC/tree/main). \
 
 Then unzip the file in direction MTSC-Graph-benchmarking/dataset/Multivariate2018_npz as the path tree shows
 ```
